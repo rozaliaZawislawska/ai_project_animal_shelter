@@ -14,3 +14,20 @@ processed_data:
   save_args:
     index: False
     encoding: utf-8
+    lineterminator: "\n"
+
+clean_data:
+  type: kedro_datasets.pandas.CSVDataset
+  filepath: data/intermediate/clean_data.csv
+  save_args:
+    index: False
+    encoding: utf-8
+    lineterminator: "\n"
+
+scaled_data:
+  type: kedro_datasets.pandas.CSVDataset
+  filepath: data/primary/scaled_data.csv
+  save_args:
+    index: False
+    encoding: utf-8
+    lineterminator: "\n"

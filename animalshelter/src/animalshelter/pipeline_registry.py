@@ -6,10 +6,13 @@ from kedro.pipeline import Pipeline
 
 from .pipelines import eda as eda_pipeline
 
+from .pipelines import preprocessing as preprocessing_pipeline
+
 
 def register_pipelines() -> dict[str, Pipeline]:
     
     return {
         "eda": eda_pipeline.create_pipeline(),
+        "preprocessing": preprocessing_pipeline.create_pipeline(),
         "__default__": eda_pipeline.create_pipeline(),
     }
